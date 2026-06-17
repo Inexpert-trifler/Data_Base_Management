@@ -2,7 +2,7 @@
 // Grocery Management System – Shared App Logic
 // ========================================
 
-const API_BASE_URL = 'http://localhost:8081';
+const API_BASE_URL = 'https://data-base-management.onrender.com';
 
 const AVATAR_COLORS = [
   '#6366f1', '#8b5cf6', '#ec4899', '#ef4444', '#f59e0b',
