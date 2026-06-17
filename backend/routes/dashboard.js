@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
     const [products] = await db.query('SELECT COUNT(*) as count FROM Product');
     const [orders] = await db.query('SELECT COUNT(*) as count FROM Orders');
     const [revenue] = await db.query('SELECT COALESCE(SUM(amount), 0) as total FROM Payment');
-    const [pendingOrders] = await db.query('SELECT COUNT(*) as count FROM Orders WHERE status IN ("pending", "processing")');
+    const [pendingOrders] = await db.query("SELECT COUNT(*) as count FROM Orders WHERE status IN ('Pending', 'Processing')");
     const [lowStock] = await db.query('SELECT COUNT(*) as count FROM Product WHERE stock < 50');
 
     // Recent orders
